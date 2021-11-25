@@ -90,6 +90,20 @@ class _FlutterRouteWidgetState extends State<FlutterRouteWidget>
           child: Column(
             crossAxisAlignment: CrossAxisAlignment.start,
             children: <Widget>[
+              InkWell(
+                child: Container(
+                    padding: const EdgeInsets.all(8.0),
+                    margin: const EdgeInsets.all(8.0),
+                    color: Colors.yellow,
+                    child: Text(
+                      '点我：测试从一个flutter page A push一个新的flutter page B，返回page A会rebuild的问题',
+                      style: TextStyle(fontSize: 22.0, color: Colors.black),
+                    )),
+                onTap: () {
+                  BoostNavigator.instance
+                      .push('popUntilView', withContainer: withContainer);
+                },
+              ),
               Container(
                 margin:
                     const EdgeInsets.only(left: 8.0, top: 10.0, bottom: 20.0),

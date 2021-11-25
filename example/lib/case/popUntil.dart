@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_boost/flutter_boost.dart';
+import 'package:flutter_boost_example/case/transparent_widget.dart';
 
 class PopUntilRoute extends StatefulWidget {
   static int count = 0;
@@ -53,6 +54,20 @@ class PopUntilRouteState extends State<PopUntilRoute> {
                         .push("popUntilView", withContainer: false);
                   },
                   child: Text('push without container ')),
+              TextButton(
+                  onPressed: () {
+                    BoostNavigator.instance
+                        .push("native")
+                        .then((value) => print("return:${value?.toString()}"));
+                  },
+                  child: Text('push 一个Native')),
+              TextButton(
+                  onPressed: () {
+                    Navigator.of(context).push(MaterialPageRoute(builder: (BuildContext context) {
+                      return TransparentWidget();
+                    }));
+                  },
+                  child: Text('原生的 push，回来不会build')),
               TextButton(
                   onPressed: () {
                     BoostNavigator.instance.push("secondStateful", withContainer: true);
