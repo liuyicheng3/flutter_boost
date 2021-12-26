@@ -35,7 +35,7 @@ class MyStatefulWidget extends StatefulWidget {
 /// This is the private State class that goes with MyStatefulWidget.
 class _MyStatefulWidgetState extends State<MyStatefulWidget> {
   final math.Random _random = math.Random();
-  SystemUiOverlayStyle _currentStyle = SystemUiOverlayStyle.light;
+  SystemUiOverlayStyle _currentStyle = SystemUiOverlayStyle.dark;
 
   void _changeColor() {
     final Color color = Color.fromRGBO(

@@ -57,7 +57,8 @@ public class LifecycleView extends FrameLayout implements LifecycleOwner, Flutte
     mLifecycleRegistry.handleLifecycleEvent(Lifecycle.Event.ON_CREATE);
     mDelegate = new FlutterActivityAndFragmentDelegate(this);
     mDelegate.onAttach(getContext());
-    mView = mDelegate.onCreateView(null, null, null);
+//    这个地方先注释掉保证编译通过
+//    mView = mDelegate.onCreateView(null, null, null);
     addView(mView);
     mFlutterView = FlutterBoostUtils.findFlutterView(mView);
   }

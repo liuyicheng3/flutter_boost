@@ -68,7 +68,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
             Intent intent = new FlutterBoostActivity.CachedEngineIntentBuilder(FlutterBoostActivity.class)
                     .backgroundMode(FlutterActivityLaunchConfigs.BackgroundMode.opaque)
                     .destroyEngineWithActivity(false)
-                    .url("flutterPage")
+                    .url("system_ui_overlay_style")
                     .urlParams(params)
                     .build(this);
             startActivityForResult(intent, REQUEST_CODE);
