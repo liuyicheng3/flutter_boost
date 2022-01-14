@@ -91,10 +91,10 @@ class _SimpleWidgetState extends State<SimpleWidget>
                         margin: const EdgeInsets.all(30.0),
                         color: Colors.yellow,
                         child: Text(
-                          'open native page',
+                          'open flutter page with container',
                           style: TextStyle(fontSize: 22.0, color: Colors.black),
                         )),
-                    onTap: () => BoostNavigator.instance.push("native"),
+                    onTap: () => BoostNavigator.instance.push("f2f_first",withContainer: true),
                   ),
                   InkWell(
                     child: Container(

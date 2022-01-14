@@ -27,6 +27,7 @@
         android:textColor="@android:color/black"
         android:id="@+id/open_native"
         android:textAllCaps="false"
+        android:visibility="gone"
         android:textSize="16sp"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -39,6 +40,7 @@
         android:textColor="@android:color/black"
         android:id="@+id/open_flutter"
         android:textAllCaps="false"
+        android:visibility="gone"
         android:textSize="16sp"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -52,6 +54,7 @@
         android:id="@+id/open_custom_view_tab"
         android:textAllCaps="false"
         android:textSize="16sp"
+        android:visibility="gone"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="@string/open_custom_view_tab" />

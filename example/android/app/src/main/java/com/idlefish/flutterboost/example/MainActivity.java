@@ -12,6 +12,8 @@ import com.idlefish.flutterboost.FlutterBoost;
 import com.idlefish.flutterboost.containers.FlutterBoostActivity;
 
 import java.lang.ref.WeakReference;
+import java.text.SimpleDateFormat;
+import java.util.Date;
 import java.util.HashMap;
 import java.util.Map;
 import android.util.Log;
@@ -43,6 +45,12 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         mOpenFlutter = findViewById(R.id.open_flutter);
         mOpenFlutterFragment = findViewById(R.id.open_flutter_fragment);
         mOpenCustomViewTab = findViewById(R.id.open_custom_view_tab);
+
+        TextView tv = findViewById(R.id.info);
+        long time=System.currentTimeMillis();//long now = android.os.SystemClock.uptimeMillis();
+        SimpleDateFormat format=new SimpleDateFormat("yyyy-MM-dd HH:mm:ss");
+        Date d1=new Date(time);
+        tv.setText(format.format(d1));
 
         mOpenNative.setOnClickListener(this);
         mOpenFlutter.setOnClickListener(this);
